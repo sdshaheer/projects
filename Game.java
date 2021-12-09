@@ -28,6 +28,7 @@ class Start extends JFrame implements ActionListener{
         c.setLayout(g);
         c.setBounds(500,500,50,50);
         btn[0]=new JButton();
+        btn[0].setText("0");
         btn[0].setVisible(false);
         btn[0].addActionListener(this);
         //btn[0].setSize(20,20);
@@ -86,7 +87,7 @@ class Start extends JFrame implements ActionListener{
         if(btn[18].getText().equals(Integer.toString(19))&&
            btn[19].getText().equals(Integer.toString(20))&&
            btn[23].getText().equals(Integer.toString(24))&&
-           btn[19].getText().equals(Integer.toString(0))){
+           btn[24].getText().equals(Integer.toString(0))){
             for (int i = 0; i < 5; i++) {
                 System.out.println("hi");
                 for (int j = 0; j < 5; j++) {
@@ -102,6 +103,8 @@ class Start extends JFrame implements ActionListener{
                     break;
             }
             if(k==25){
+                btn[24].setVisible(true);
+                btn[24].setText("25")
                 for (int i = 0; i < 25; i++) {
                     btn[i].setBackground(Color.green);
                 }
